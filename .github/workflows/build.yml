@@ -43,7 +43,7 @@ jobs:
           ASPNETCORE_ENVIRONMENT: Development
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"matheus-vieira_restaurant-order-app-minimal-api" /o:"matheus-vieira" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet sonarscanner begin /k:"matheus-vieira_restaurant-order-app-minimal-api" /o:"matheus-vieira" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build .\src\Restaurant
           dotnet test .\src\Restaurant --logger trx --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=.\coverage.\ --settings coverlet.runsettings
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
