@@ -3,16 +3,16 @@ public class MorningDishes : Dishes
 {
     public const string Name = nameof(MorningDishes);
 
-    private static IList<int> AllowedMultiples => new List<int> { 3 };
+    private static System.Collections.Generic.IList<int> AllowedMultiples => new System.Collections.Generic.List<int> { 3 };
 
-    private static IDictionary<int, string> InternalDishDictionary => new Dictionary<int, string>
+    private static System.Collections.Generic.IDictionary<int, string> InternalDishDictionary => new System.Collections.Generic.Dictionary<int, string>
     {
         [1] = "eggs",
         [2] = "toast",
         [3] = "coffee",
     };
 
-    protected override IList<int> GetAllowedMultiples() => AllowedMultiples;
+    protected override System.Collections.Generic.IList<int> GetAllowedMultiples() => AllowedMultiples;
 
-    protected override IDictionary<int, string> DishDictionary => InternalDishDictionary;
+    protected override System.Collections.Generic.IDictionary<int, string> DishDictionary => InternalDishDictionary;
 }
