@@ -1,5 +1,5 @@
 [![.NET](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/dotnet.yml/badge.svg)](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/dotnet.yml)
-[![Build](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/build.yml/badge.svg)](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/build.yml)
+[![SonarCloud](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/build.yml/badge.svg)](https://github.com/matheus-vieira/restaurant-order-app-minimal-api/actions/workflows/build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matheus-vieira_restaurant-order-app-minimal-api&metric=alert_status)](https://sonarcloud.io/dashboard?id=matheus-vieira_restaurant-order-app-minimal-api)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=matheus-vieira_restaurant-order-app-minimal-api&metric=bugs)](https://sonarcloud.io/dashboard?id=matheus-vieira_restaurant-order-app-minimal-api)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=matheus-vieira_restaurant-order-app-minimal-api&metric=code_smells)](https://sonarcloud.io/dashboard?id=matheus-vieira_restaurant-order-app-minimal-api)
