@@ -10,7 +10,7 @@ public class MorningDishesTests : DishesBaseTests
     {
     }
 
-    public static IEnumerable<object[]> ValuesToMatch()
+    public static System.Collections.Generic.IEnumerable<object[]> ValuesToMatch()
     {
         yield return new object[] { new[] { 1, 2, 3 }, new[] { "eggs", "toast", "coffee" } };
         yield return new object[] { new[] { 1, 1, 2, 3 }, new[] { "toast", "coffee" } };

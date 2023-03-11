@@ -11,7 +11,7 @@ public class MorningOrdersControllersTests : OrderControllersTestBase
     {
     }
 
-    public static IEnumerable<object[]> ValuesToMatch()
+    public static System.Collections.Generic.IEnumerable<object[]> ValuesToMatch()
     {
         yield return new object[] { new[] { 1, 2, 3 }, new[] { "eggs", "toast", "coffee" } };
         yield return new object[] { new[] { 5 }, new[] { "error" } };

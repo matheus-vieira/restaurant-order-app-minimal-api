@@ -1,4 +1,5 @@
-﻿using Api.Order.Controllers;
+﻿using System.Linq;
+using Api.Order.Controllers;
 using Api.Order.Domain.Dishes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,7 +12,7 @@ public abstract class OrderControllersTestBase
     private readonly AutoMocker _mocker;
     private readonly IDishes _service;
     protected readonly OrdersControllers _controller;
-    private readonly Func<Type, IDishes> _serviceResolver;
+    private readonly System.Func<System.Type, IDishes> _serviceResolver;
 
     public OrderControllersTestBase(IDishes service)
     {

@@ -1,4 +1,5 @@
 ﻿namespace Api.Order.Domain.Dishes;
+
 public interface IDishes
 {
     string[] GetDishes(int[] dishesTypes);
@@ -6,8 +7,8 @@ public interface IDishes
 
 public abstract class Dishes : IDishes
 {
-    protected abstract IList<int> GetAllowedMultiples();
-    protected abstract IDictionary<int, string> DishDictionary { get; }
+    protected abstract System.Collections.Generic.IList<int> GetAllowedMultiples();
+    protected abstract System.Collections.Generic.IDictionary<int, string> DishDictionary { get; }
 
     public string[] GetDishes(int[] dishesTypes)
     {
@@ -16,9 +17,9 @@ public abstract class Dishes : IDishes
         return BuildDishes(dishes);
     }
 
-    private string[] BuildDishes(SortedDictionary<int, int> dishes)
+    private string[] BuildDishes(System.Collections.Generic.SortedDictionary<int, int> dishes)
     {
-        List<string> list = new();
+        System.Collections.Generic.List<string> list = new();
         var dishDictionary = DishDictionary;
         foreach (var item in dishes)
         {
@@ -40,9 +41,9 @@ public abstract class Dishes : IDishes
     private bool CanHaveMultiples(int dishType)
         => GetAllowedMultiples().Contains(dishType);
 
-    private static SortedDictionary<int, int> LoadDishes(int[] dishesTypes)
+    private static System.Collections.Generic.SortedDictionary<int, int> LoadDishes(int[] dishesTypes)
     {
-        SortedDictionary<int, int> dishes = new();
+        System.Collections.Generic.SortedDictionary<int, int> dishes = new();
 
         for (int i = 0; i < dishesTypes.Length; i++)
         {

@@ -22,7 +22,7 @@ public class DomainExtensionsTests
     [TestMethod]
     [DataRow(typeof(MorningDishes), DisplayName = "Morning Dishes")]
     [DataRow(typeof(NightDishes), DisplayName = "Night Dishes")]
-    public void ShouldHaveServicesRegistered(Type type)
+    public void ShouldHaveServicesRegistered(System.Type type)
     {
         // arrange
         _services.UseDomain();
@@ -40,14 +40,14 @@ public class DomainExtensionsTests
     [TestMethod]
     [DataRow(typeof(MorningDishes), DisplayName = "Morning Dishes")]
     [DataRow(typeof(NightDishes), DisplayName = "Night Dishes")]
-    public void ShouldReturndIDishesService(Type type)
+    public void ShouldReturnIDishesService(System.Type type)
     {
         // arrange
         _services.UseDomain();
 
         // act
         var serviceProvider = _services.BuildServiceProvider();
-        var serviceResolver = serviceProvider.GetRequiredService<Func<Type, IDishes>>();
+        var serviceResolver = serviceProvider.GetRequiredService<System.Func<System.Type, IDishes>>();
         var service = serviceResolver(type);
 
         // assert
@@ -63,9 +63,9 @@ public class DomainExtensionsTests
 
         // act
         var serviceProvider = _services.BuildServiceProvider();
-        var serviceResolver = serviceProvider.GetRequiredService<Func<Type, IDishes>>();
+        var serviceResolver = serviceProvider.GetRequiredService<System.Func<System.Type, IDishes>>();
 
         // assert
-        Assert.ThrowsException<InvalidOperationException>(() => serviceResolver(typeof(object)));
+        Assert.ThrowsException<System.InvalidOperationException>(() => serviceResolver(typeof(object)));
     }
 }
